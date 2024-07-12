@@ -1,0 +1,363 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+        <div class="row">
+            <div class="main">
+                <section id="Promos">
+                    <div class="ttl_promos">PROMOS DE LA SEMANA</div>
+                    <div>
+                        <!-- Carousel -->
+                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                            </div>
+                        
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{% static 'img/Promos/PromosSemana_01.png' %}" alt="Cucuruchazo Promo 2x1 Lunes y Miércoles" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'img/Promos/PromosSemana_02.png' %}" alt="Comprás 1 kgr y te regalamos 1/2" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'img/Promos/PromosSemana_03.png' %}" alt="2x1 en Postres Helados" class="d-block w-100">
+                            </div>
+                            </div>
+                        
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+              
+                </section>
+                <section id="Sabores" class="gapSection">
+                    <div class="flavorsHeader">
+                        <p class="flavorTtlHeader">SABORES</p>
+                    </div>
+                    <div class="flavorsFlexBx">
+                        <div>
+                            <span class="flavorTtl">Cookies y Dulce De Leche</span>
+                            <span class="flavorDescription">Crema tipo americana con dulce de leche natural y cookies de
+                                chocolate.</span>
+
+                            <span class="flavorTtl">Flan Con Dulce De Leche</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche, yema de huevo con
+                                suave sabor a caramelo y dulce de leche natural.</span>
+
+                            <span class="flavorTtl">Nicoletta Avellana</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y avellanas, con
+                                crocante de chocolate y avellanas.</span>
+
+                            <span class="flavorTtl">Crema Americana</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y vainilla.</span>
+
+                            <span class="flavorTtl">Crema de Vainilla</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche, yema de huevo y
+                                chaucha de vainilla.</span>
+
+                            <span class="flavorTtl">Almendrado</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y almendras enteras
+                                caramelizadas.</span>
+
+                            <span class="flavorTtl">Menta Granizada</span>
+                            <span class="flavorDescription">crema a base de leche, crema de leche y menta, con fino
+                                granizado de chocolate.</span>
+
+                            <span class="flavorTtl">Pistachio</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y pistachio.</span>
+
+                            <span class="flavorTtl">Super Sambayón</span>
+                            <span class="flavorDescription">Crema a base de yema de huevo, crema de leche y vino
+                                generoso.</span>
+
+                            <span class="flavorTtl">Super Sambayón Con Almendras</span>
+                            <span class="flavorDescription">Crema a base de yema de huevo, crema de leche y vino
+                                generoso, con almendras cubiertas en chocolate.</span>
+
+                            <span class="flavorTtl">Granizado De Chocolate</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y suave sabor a licor,
+                                con fino granizado de chocolate.</span>
+
+                            <span class="flavorTtl">Tiramisú</span>
+                            <span class="flavorDescription">Crema a base de crema de leche, yema de huevo y vino
+                                generoso, con dulce de leche natural, cacao y café.</span>
+
+                            <span class="flavorTtl">Mascarpone Con Frutos Del Bosque</span>
+                            <span class="flavorDescription">Helado a base de leche y queso crema mascarpone veteado con
+                                salsa de frutos del bosque.</span>
+                        </div>
+                        <div>
+                            <span class="flavorTtl">Cookies y Dulce De Leche</span>
+                            <span class="flavorDescription">Crema tipo americana con dulce de leche natural y cookies de
+                                chocolate.</span>
+
+                            <span class="flavorTtl">Flan Con Dulce De Leche</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche, yema de huevo con
+                                suave sabor a caramelo y dulce de leche natural.</span>
+
+                            <span class="flavorTtl">Nicoletta Avellana</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y avellanas, con
+                                crocante de chocolate y avellanas.</span>
+
+                            <span class="flavorTtl">Crema Americana</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y vainilla.</span>
+
+                            <span class="flavorTtl">Crema de Vainilla</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche, yema de huevo y
+                                chaucha de vainilla.</span>
+
+                            <span class="flavorTtl">Almendrado</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y almendras enteras
+                                caramelizadas.</span>
+
+                            <span class="flavorTtl">Menta Granizada</span>
+                            <span class="flavorDescription">crema a base de leche, crema de leche y menta, con fino
+                                granizado de chocolate.</span>
+
+                            <span class="flavorTtl">Pistachio</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y pistachio.</span>
+
+                            <span class="flavorTtl">Super Sambayón</span>
+                            <span class="flavorDescription">Crema a base de yema de huevo, crema de leche y vino
+                                generoso.</span>
+
+                            <span class="flavorTtl">Super Sambayón Con Almendras</span>
+                            <span class="flavorDescription">Crema a base de yema de huevo, crema de leche y vino
+                                generoso, con almendras cubiertas en chocolate.</span>
+
+                            <span class="flavorTtl">Granizado De Chocolate</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y suave sabor a licor,
+                                con fino granizado de chocolate.</span>
+
+                            <span class="flavorTtl">Tiramisú</span>
+                            <span class="flavorDescription">Crema a base de crema de leche, yema de huevo y vino
+                                generoso, con dulce de leche natural, cacao y café.</span>
+
+                            <span class="flavorTtl">Mascarpone Con Frutos Del Bosque</span>
+                            <span class="flavorDescription">Helado a base de leche y queso crema mascarpone veteado con
+                                salsa de frutos del bosque.</span>
+                        </div>
+                        <div>
+                            <span class="flavorTtl">Cookies y Dulce De Leche</span>
+                            <span class="flavorDescription">Crema tipo americana con dulce de leche natural y cookies de
+                                chocolate.</span>
+
+                            <span class="flavorTtl">Flan Con Dulce De Leche</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche, yema de huevo con
+                                suave sabor a caramelo y dulce de leche natural.</span>
+
+                            <span class="flavorTtl">Nicoletta Avellana</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y avellanas, con
+                                crocante de chocolate y avellanas.</span>
+
+                            <span class="flavorTtl">Crema Americana</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y vainilla.</span>
+
+                            <span class="flavorTtl">Crema de Vainilla</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche, yema de huevo y
+                                chaucha de vainilla.</span>
+
+                            <span class="flavorTtl">Almendrado</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y almendras enteras
+                                caramelizadas.</span>
+
+                            <span class="flavorTtl">Menta Granizada</span>
+                            <span class="flavorDescription">crema a base de leche, crema de leche y menta, con fino
+                                granizado de chocolate.</span>
+
+                            <span class="flavorTtl">Pistachio</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y pistachio.</span>
+
+                            <span class="flavorTtl">Super Sambayón</span>
+                            <span class="flavorDescription">Crema a base de yema de huevo, crema de leche y vino
+                                generoso.</span>
+
+                            <span class="flavorTtl">Super Sambayón Con Almendras</span>
+                            <span class="flavorDescription">Crema a base de yema de huevo, crema de leche y vino
+                                generoso, con almendras cubiertas en chocolate.</span>
+
+                            <span class="flavorTtl">Granizado De Chocolate</span>
+                            <span class="flavorDescription">Crema a base de leche, crema de leche y suave sabor a licor,
+                                con fino granizado de chocolate.</span>
+
+                            <span class="flavorTtl">Tiramisú</span>
+                            <span class="flavorDescription">Crema a base de crema de leche, yema de huevo y vino
+                                generoso, con dulce de leche natural, cacao y café.</span>
+
+                            <span class="flavorTtl">Mascarpone Con Frutos Del Bosque</span>
+                            <span class="flavorDescription">Helado a base de leche y queso crema mascarpone veteado con
+                                salsa de frutos del bosque.</span>
+                        </div>
+                    </div>
+                </section>
+                <section id="Sucursales" class="gapSection">
+                  
+                    <h2>NUESTRAS SUCURSALES</h2>
+                    <div class="branchContainerFlex">
+
+                        <div class="branchTitle"><H4>SUCURSAL PALERMO HOLLYWOOD</H4>
+                             <H5>HUMBOLDT 1967</H5></div>
+                        
+                        <div class="branchFlexBxItem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti velit
+                            aliquam. Sint veritatis molestiae odio! Nobis impedit rem odio repellendus corporis
+                            beatae ducimus earum ab consequuntur culpa, cupiditate sapiente eos dignissimos
+                            doloremque veritatis sit eveniet. Aut, architecto voluptatibus omnis culpa dolorem
+                            tenetur eligendi quis, debitis excepturi laudantium earum deleniti voluptatum</div>
+                        <div class="branchFlexBxItem"><img src="{% static 'img/heladeria_01.jpg' %}" alt="Sucursal Palermo"></div>
+                        <div class="branchFlexBxItem"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.8399556611503!2d-58.43529352347754!3d-34.58291595640136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb58e3cb56881%3A0x2f6596d6d94565b!2sHumboldt%201967%2C%20C1414CTU%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1715979849086!5m2!1ses!2sar"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+                        <div class="branchTitle">
+                        <H4>SUCURSAL VILLA URQUIZA</H4>
+                        <H5>Av.OLAZÁBAL 5357</H5></div>
+
+                        <div class="branchFlexBxItem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti velit
+                            aliquam. Sint veritatis molestiae odio! Nobis impedit rem odio repellendus corporis
+                            beatae ducimus earum ab consequuntur culpa, cupiditate sapiente eos dignissimos
+                            doloremque veritatis sit eveniet. Aut, architecto voluptatibus omnis culpa dolorem
+                            tenetur eligendi quis, debitis excepturi laudantium earum deleniti voluptatum</div>
+                        <div class="branchFlexBxItem"><img src="{% static 'img/heladeria_01.jpg' %}" alt="Sucursal Palermo"></div>
+                        <div class="branchFlexBxItem"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.5125776576804!2d-58.49008240587091!3d-34.578230041773445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb65cd3e952d9%3A0xe1e92eb7f8853683!2sAv.%20Olaz%C3%A1bal%205357%2C%20Villa%20Urquiza%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1715979997949!5m2!1ses!2sar"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    </div>
+                </section>
+                <section id="Contacto" class="gapSection">
+                    <span class="ttlContacto">CONTACTO</span>
+                    <div class="containerContactBig">
+                        <div class="containerContacto">
+                            <span class="contactoTitulo">Contáctate con nosotros</span>
+                            <span class="contactoTexto">Completa el formulario y comentanos tus sugerencias, te responderemos a la brevedad!</span>
+                            <img src="{% static 'img/imagen-contacto.jpg' %}" alt="imagen de contacto" width="100%">
+                        </div>
+                        <div class="containerContacto">
+                            <form id="contactForm" action="#">
+                                <fieldset>
+                                    <p>
+                                        <label class="labels" for="nombre">Nombre</label><span class="campoObligatorio">&times;</span>
+                                        <input id="nombre" name="nombre" class="formContacto frmInput" type="text">
+                                    </p>
+                                    <p>
+                                        <label class="labels" for="telefono">Telefono</label><span class="campoObligatorio">&times;</span>
+                                        <input id="telefono" name="telefono" class="formContacto frmInput" type="text">
+                                    </p>
+                                    <p>
+                                        <label class="labels" for="email">Email</label><span class="campoObligatorio">&times;</span>
+                                        <input id="email" name="email" class="formContacto frmInput" type="email">
+                                    </p>
+                                    <p>
+                                        <label class="labels" for="tipoConsulta">Tipo</label>
+                                        <select id="tipoConsulta" name="tipoConsulta" class="formContacto frmSelect">
+                                            <option value>--Por favor, elije una opción--</option>
+                                            <option value="Sugerencia">Sugerencia</option>
+                                            <option value="Reclamo">Reclamo</option>
+                                            <option value="Pedido">Pedidos</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label class="labels" for="mensaje">Mensaje</label><span class="campoObligatorio">&times; (al menos 50 caracteres)</span>
+                                        <textarea id="mensaje" name="mensaje" class="formContacto frmTextarea"
+                                            rows="14" ></textarea>
+                                    </p>
+                                    <div class="medio">
+                                        <p>
+                                            <label class="respuesta">¿ Por que medio preferís que te contactemos ?</label>
+                                            <br>
+                                            <input type="radio" name="medioRespuesta" id="medioTelefono" value="Telefono/WhatsApp"><label for="medioTelefono" class="respuesta">Por Telefono/WhatsApp</label>
+                                            <input type="radio" name="medioRespuesta" id="medioEmail" value="Email" checked><label for="medioEmail" class="respuesta">Por email</label>
+                                        </p>
+                                        <p>
+                                            <label for="recibirPromos" class="respuesta">¿ Queres recibir nuestras promos ?</label>
+                                            <input type="checkbox" name="recibirPromos" id="recibirPromos" checked>
+                                        </p>
+                                    </div>
+                                    <span class="campoObligatorio">Estos campos son obligatorios</span>
+                                    <p>
+                                        <input class="formContacto frmBoton" type="submit" value="ENVIAR" id="submitButton">
+                                    </p>
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Aca pongo el codigo para la ventana emergente de respuesta al formulario de contacto -->
+            <div id="dialogContainer" class="dialog-container">
+                <div class="dialog-content">
+                    <span class="close-button">x</span>
+                    <h2 id="title-form">¡Hola! USUARIO</h2>
+                    <p id="datos-recibidos"></p>
+                    <span> [ Mensaje recibido ]</span>
+                    <p id="mensaje-recibido"></p>
+                </div>
+            </div>
+
+            <!-- Aside -->
+            <div class="side">
+                {% block content %}
+                {% if not request.user.is_authenticated %}
+                    <div class="login-container">
+                        <h2>Inicia sesión</h2>
+                        <form id="loginForm" method="POST" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            {{ form.username }}
+                            {{ form.password }}
+                            <input type="text" id="username" name="username" placeholder="Usuario" required>
+                            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                            <button type="submit">Ingresar</button>
+                       </form>
+                       {% if error_message %}
+                            <p class="error-message">{{ error_message }}</p>
+                            <script>document.getElementById('username').focus();</script>
+                       {% endif %}
+                    </div>
+                {% endif %}
+                {% endblock %}
+            <br><br>
+                <h3>Algunas otras cosas</h3>
+                <p>Se pueden colocar banners de publicidad. Audios. Videos</p>
+                <div class="fakeimg" style="height:60px;">Video</div><br>
+                <div class="fakeimg" style="height:60px;">Audio</div><br>
+
+                <!-- BORRAR AL FINAL DEL TP -->
+                <p><b>Listado de requisitos del TP, tareas para repartir:</b>
+                <Ol Type="1">
+                    <li>El sitio web debe poseer al menos 4 páginas HTML o 4 secciones si se trata de un sitio One Page.
+                    </li><br>
+                    <li>El sitio web debe incluir un formulario de contacto, con al menos 5 campos que incluya (un
+                        checkbox o radiobutton), un select y una
+                        imagen, con validación realizada mediante JavaScript para que los campos sean obligatorios.</li>
+                    <br>
+                    <li>Tener al menos una página totalmente responsive con mínimo 3 puntos de corte con media querys
+                        para 3 tamaños de dispositivos
+                        (PC escritorio, Tablet, Celular). Para el diseño debe usarse CSS.</li><br>
+                    <li>Utilizar al menos una animación, transformación o una transición.</li><br>
+                    <li>Poseer una estructura HTML maquetada con Flexbox y/o Grid.</li><br>
+                    <li>Se considerará la presentación general del proyecto, la legibilidad del mismo, la navegación sin
+                        llegar a puntos de no
+                        retorno, la optimización de imagenes para la web y el uso de favicon</li><br>
+                    <li>El trabajo práctico deberá subirse a un servidor online y compartirse mediante un repositorio de
+                        Git. (Mandatorio)</li><br>
+                    <li>La página deberá subirse a un servidor on-line para poder ser navegada por el Docente. Ejemplo:
+                        Netlify o similar.
+                        (Mandatorio)</li><br>
+                    <li>El sitio web debe estar estructurado utilizando etiquetas semánticas HTML correctamente. Debe
+                        pasar la validación
+                        de https://validator.w3.org/ sin errores. (Mandatorio)</li><br>
+                    <li>Utilizar iframes y/o íconos de FontAwesome y/o fuentes locales o bien de Google Fonts.Es
+                        optativo incluir algún
+                        elemento de Bootstrap.</li><br>
+                </Ol>
+                </p>
+                <!--  FIN BORRAR AL FINAL DEL TP -->
+            </div>
+        </div>
+{% endblock %}

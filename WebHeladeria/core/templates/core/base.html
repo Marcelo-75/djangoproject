@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Galipolli Helados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--bootstrap-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+    <div class="centerAll">
+        <!-- Top -->
+            <div class="topHeader">
+                <header id="Home">
+                    <img src="{% static 'img/logo.png' %}" alt="logo">
+                </header>
+                <nav class="navHeader">
+                    <ul class="navRedesHeader">
+                        <li><a href="#"><img id="red_facebook" src="{% static 'img/ffacebook.png' %}" alt ="imagen facebook" onmouseover="cambiarImagen('red_facebook','facebook.png')" onmouseout="restaurarImagen('red_facebook','ffacebook.png')"></a></li>
+                        <li><a href="#"><img id="red_instagram" src="{% static 'img/iinstagram.png' %}" alt ="imagen instagram" onmouseover="cambiarImagen('red_instagram','instagram.png')" onmouseout="restaurarImagen('red_instagram','iinstagram.png')"></a></li>
+                        <li><a href="#"><img id="red_youtube" src="{% static 'img/yyoutube.png' %}" alt ="imagen youtube" onmouseover="cambiarImagen('red_youtube','youtube.png')" onmouseout="restaurarImagen('red_youtube','yyoutube.png')"></a></li>
+                        <li><a href="#"><img id="red_whatsapp" src="{% static 'img/wwhatsapp.png' %}" alt ="imagen whatsapp" onmouseover="cambiarImagen('red_whatsapp','whatsapp.png')" onmouseout="restaurarImagen('red_whatsapp','wwhatsapp.png')"></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="designBar">
+                <div class="scrolling-textContainer">
+                    <p class="scrolling-text">PROMOCIONES todas las semanas. No te las pierdas!!! --------------------- <a href="#" class="loginIngresar"><span class="btnScrolling-text">INGRESÁ</span></a> con tu usuario y accedé a mayores descuentos.</p>
+                </div>
+            </div>
+
+            <!-- Header -->
+            <div class="header">
+                <div class="txtHeader">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+
+            <!-- NavBar -->
+            <div class="navbar menu-desktop">
+                {% if not request.user.is_authenticated %}
+                    <a href="{{ SITE_URL }}#username" class="loginIngresar">Ingresar</a>
+                {% else %}
+                    <a href="{% url 'salir' %}">Salir</a>
+                {% endif %}
+                <a href="{{ SITE_URL }}#Promos">Promos</a>
+                <a href="{{ SITE_URL }}#Sabores">Sabores</a>
+                <a href="{{ SITE_URL }}#Sucursales">Sucursales</a>
+                <a href="{{ SITE_URL }}#Contacto">Contacto</a>
+                <div class="log_user_desk">
+                    {% if not request.user.is_authenticated %}
+                        <a href="{% url 'register' %}#formularioRegistro">
+                            <img id="logo_user" src="{% static 'img/login-user-red.png' %}">
+                            <p>Registrate</p>
+                        </a>
+                    {% else %}
+                        <a href="{% url 'profile' %}#cardProfile">
+                            <img id="logo_user" src="{% static 'img/login-user-gris.png' %}" width="45px">
+                            <p><strong>{{ request.user.username }}</strong></p>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- menu para pantalla chica -->
+            <div class="menu-mobile">
+                <button class="btn-menu">&#9776;</button>
+                <ul class="menu-items">
+                    {% if not request.user.is_authenticated %}
+                        <li><a href="{{ SITE_URL }}#username" class="loginIngresar">Ingresar</a></li>
+                    {% else %}
+                        <li><a href="{% url 'salir' %}" class="loginCerrar">Salir</a></li>
+                    {% endif %}
+                    <li><a href="{{ SITE_URL }}#Promos">Promos</a></li>
+                    <li><a href="{{ SITE_URL }}#Sabores">Sabores</a></li>
+                    <li><a href="{{ SITE_URL }}#Sucursales">Sucursales</a></li>
+                    <li><a href="{{ SITE_URL }}#Contacto">Contacto</a></li>
+                    {% if not request.user.is_authenticated %}
+                        <li><a href="{% url 'register' %}#formularioRegistro">Registrate</a></li>
+                    {% else %}
+                        <li><a href="#">Mi Perfil {{ request.user.username }}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+            {% block main %}{% endblock %}
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footerLogo">
+                    <img src="{% static 'img/logo.png' %}" alt="imagen logo">
+                </div>
+                <div class="footerNav">
+                    <ul>
+                        {% if not request.user.is_authenticated %}
+                            <li><a href="{{ SITE_URL }}#username" class="loginIngresar">Ingresar</a></li>
+                        {% else %}
+                            <li><a href="{% url 'salir' %}" class="loginCerrar">Salir</a></li>
+                        {% endif %}
+                        <li><a href="{{ SITE_URL }}#Promos">Promos</a></li>
+                        <li><a href="{{ SITE_URL }}#Sabores">Sabores</a></li>
+                        <li><a href="{{ SITE_URL }}#Sucursales">Sucursales</a></li>
+                        <li><a href="{{ SITE_URL }}#Contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footerRedes">
+                    <ul>
+                        <li><a href="#"><img id="red_facebook_footer" src="{% static 'img/ffacebook.png' %}" alt="imagen facebook" onmouseover="cambiarImagen('red_facebook_footer','facebook.png')" onmouseout="restaurarImagen('red_facebook_footer','ffacebook.png')"></a></li>
+                        <li><a href="#"><img id="red_instagram_footer" src="{% static 'img/iinstagram.png' %}" alt="imagen instagram" onmouseover="cambiarImagen('red_instagram_footer','instagram.png')" onmouseout="restaurarImagen('red_instagram_footer','iinstagram.png')"></a></li>
+                        <li><a href="#"><img id="red_youtube_footer" src="{% static 'img/yyoutube.png' %}" alt="imagen youtube" onmouseover="cambiarImagen('red_youtube_footer','youtube.png')" onmouseout="restaurarImagen('red_youtube_footer','yyoutube.png')"></a></li>
+                        <li><a href="#"><img id="red_whatsapp_footer" src="{% static 'img/wwhatsapp.png' %}" alt="imagen whatsapp" onmouseover="cambiarImagen('red_whatsapp_footer','whatsapp.png')" onmouseout="restaurarImagen('red_whatsapp_footer','wwhatsapp.png')"></a></li>
+                    </ul>
+                </div>
+            </div>
+                <script src="{% static 'js/script.js' %}"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
+            

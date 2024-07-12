@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<section class="registration-section">
+    <h2>Regístrate</h2>
+    <form class="registration-form" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Usuario:</label>
+        <input type="text" name="username" maxlength="150" autofocus required aria-describedby="id_username_helptext" id="id_username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" maxlength="320" required id="id_email" required>
+      </div>
+      <div class="form-group">
+        <label for="id_foto_cliente">Foto cliente:</label>
+        <input type="file" name="foto_cliente" id="id_foto_cliente">
+    </div>
+      <div class="form-group">
+        <label for="address">Nombre:</label>
+        <input type="text" name="first_name" maxlength="150" id="id_first_name">
+      </div>
+      <div class="form-group">
+        <label for="address">Apellido:</label>
+        <input type="text" name="last_name" maxlength="150" id="id_last_name">
+      </div>
+      <div class="form-group">
+        <label for="phone">Teléfono:</label>
+        <input type="text" name="telefono" maxlength="15" required id="id_telefono">
+      </div>
+      <div class="form-group">
+        <label for="address">Dirección:</label>
+        <input type="text" name="direccion" maxlength="255" required id="id_direccion">
+      </div>
+      <div class="form-group">
+        <label for="id_id_condicion_iva">Condición IVA:</label>
+        <select name="id_condicion_iva" id="id_id_condicion_iva">
+            <option value="1">CONSUMIDOR FINAL</option>
+            <option value="2">RESPONSABLE INSCRIPTO</option>
+            <option value="3">MONOTRIBUTISTA</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password1" autocomplete="new-password" required aria-describedby="id_password1_helptext" id="id_password1">
+      </div>
+      <div class="form-group">
+        <label for="password2">Confirma contraseña:</label>
+        <input type="password" name="password2" autocomplete="new-password" required aria-describedby="id_password2_helptext" id="id_password2">
+      </div>
+      <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+  </section>
+
+    {% comment %} <div class="dj_container">
+        <h2 id="formularioRegistro" class='dj_h2'>Registro de Usuario</h2>
+        <form class='dj_form' method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+                <div class="fieldWrapper">
+                    {{ field.label_tag }} {{ field }}
+                    {{ field.errors }}
+                </div>
+            {% endfor %}
+            <button class='dj_button' type="submit">Registrar</button>
+        </form>
+    </div> {% endcomment %}
+{% endblock %}

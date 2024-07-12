@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<h1 class="title_profile">Mi Perfil ({{ usuario }})</h1>
+<div id="cardProfile" class="card_profile">
+    <div class="profile-content">
+        <div class="profile-image">
+            <img src="{{ foto_cliente }}" width="150px" height="150px" alt="foto cliente">
+            <p>{{ usuario }}</p>
+        </div>
+        <div class="profile-info">
+            <div class="profile_info-row">
+                <div class="profile_info-label">Nombre</div>
+                <div class="profile_info-value"><input type="text" value="{{ nombre }}"></div>
+            </div>
+            <div class="profile_info-row">
+                <div class="profile_info-label">Apellido</div>
+                <div class="profile_info-value"><input type="text" value="{{ apellido }}"></div>
+            </div>
+            <div class="profile_info-row">
+                <div class="profile_info-label">Email</div>
+                <div class="profile_info-value"><input type="text" value="{{ email }}"></div>
+            </div>
+            <div class="profile_info-row">
+                <div class="profile_info-label">Teléfono</div>
+                <div class="profile_info-value"><input type="text" value="{{ telefono }}"></div>
+            </div>
+            <div class="profile_info-row">
+                <div class="profile_info-label">Dirección</div>
+                <div class="profile_info-value"><input type="text" value="{{ direccion }}"></div>
+            </div>
+
+            <div class="profile_info-row">
+                <div class="profile_info-label">Condición IVA:</div>
+                <div class="profile_info-value">
+                    <select class="profile_select" name="id_profile_iva" id="id_id_profile_iva">
+                        <option value="1"{% if condicion_iva == 'CONSUMIDOR FINAL' %}selected{% endif %}>CONSUMIDOR FINAL</option>
+                        <option value="2"{% if condicion_iva == 'RESPONSABLE INSCRIPTO' %}selected{% endif %}>RESPONSABLE INSCRIPTO</option>
+                        <option value="3"{% if condicion_iva == 'MONOTRIBUTO' %}selected{% endif %}>MONOTRIBUTO</option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="profile_button-row">
+        <input class="btn btn-primary" type="button" value="Ver Pedidos">
+        <input class="btn btn-primary" type="button" value="Modificar">
+    </div>
+</div>
+
+{% endblock %}
