@@ -34,12 +34,12 @@ def profile(request):
     
     cliente = Clientes.objects.get(username=user.username)
     condicion_iva = cliente.id_condicion_iva.condicion_iva
-    
-    foto_cliente_ruta = os.path.join(settings.MEDIA_ROOT, cliente.foto_cliente.name)
-    if os.path.exists(foto_cliente_ruta):
+
+    if cliente.foto_cliente and os.path.isfile(os.path.join(settings.MEDIA_ROOT, cliente.foto_cliente.name)):
         foto_cliente = cliente.foto_cliente.url
     else:
-        foto_cliente = '/static/img/imagenes_clientes/default.png'
+        foto_cliente = settings.MEDIA_URL + 'imagenes_clientes/default.png'
+
 
     context = {
         'usuario': cliente.username,

@@ -18,7 +18,8 @@ class Clientes(User):
     telefono = models.CharField(max_length=15, verbose_name='Teléfono') # Telefono del cliente de tabla propia de clientes
     direccion = models.CharField(max_length=255, blank=True, verbose_name='Dirección') # Direccion del cliente (no obligatoria)
     id_condicion_iva = models.ForeignKey(CondicionIva, on_delete=models.PROTECT, related_name='clientes', verbose_name='ID de Condicion de IVA', default=1)
-    foto_cliente = models.ImageField(upload_to='static/img/imagenes_clientes/', default='static/img/imagenes_clientes/default.png', verbose_name='Foto del Cliente') # Si esta vacia se cargara con un emoji
+    #foto_cliente = models.ImageField(upload_to='static/img/imagenes_clientes/', default='static/img/imagenes_clientes/default.png', verbose_name='Foto del Cliente') # Si esta vacia se cargara con un emoji
+    foto_cliente = models.ImageField(upload_to='imagenes_clientes/', default='imagenes_clientes/default.png', verbose_name='Foto del Cliente') # Si esta vacia se cargara con un emoji
     
     class Meta:
         db_table = 'clientes'
