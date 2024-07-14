@@ -53,20 +53,23 @@
       </div>
       <button type="submit" class="btn btn-primary">Registrarse</button>
     </form>
+    {% if form.errors %}
+        <div id="error_message_register" class="error-messages">
+            <ul>
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <li><strong>{{ field.label }}:</strong> {{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    {% if anchor %}
+        <script>window.location.hash = "{{ anchor }}";</script>
+    {% endif %}
   </section>
 
-    {% comment %} <div class="dj_container">
-        <h2 id="formularioRegistro" class='dj_h2'>Registro de Usuario</h2>
-        <form class='dj_form' method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.non_field_errors }}
-            {% for field in form %}
-                <div class="fieldWrapper">
-                    {{ field.label_tag }} {{ field }}
-                    {{ field.errors }}
-                </div>
-            {% endfor %}
-            <button class='dj_button' type="submit">Registrar</button>
-        </form>
-    </div> {% endcomment %}
 {% endblock %}

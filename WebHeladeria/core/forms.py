@@ -1,10 +1,6 @@
 from django import forms
 from django.contrib.auth import authenticate
-#from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
-
-
-
 from django.contrib.auth.forms import UserCreationForm
 from .models import Clientes, CondicionIva
 
@@ -18,6 +14,23 @@ class ClienteCreationForm(UserCreationForm):
     class Meta:
         model = Clientes
         fields = ('username', 'email', 'first_name', 'last_name', 'telefono', 'direccion', 'id_condicion_iva', 'foto_cliente', 'password1', 'password2')
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if Clientes.objects.filter(email=email).exists():
+            raise forms.ValidationError("El correo ya se encuentra registrado")
+        return email
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password1 = cleaned_data.get("password1")
+        password2 = cleaned_data.get("password2")
+
+        if password1 and password2 and password1 != password2:
+            self.add_error('password2', "Las claves no coinciden")
+
+        return cleaned_data
+
 
     def save(self, commit=True):
         user = super().save(commit=False)

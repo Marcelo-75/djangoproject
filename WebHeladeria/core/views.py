@@ -2,11 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from .models import Clientes, CondicionIva
+from .models import Clientes, CondicionIva, Helado
 from .forms import ClienteCreationForm
-
 from django.conf import settings # Para determinar si existe la foto del cliente en profile
 import os # Para determinar si existe la foto del cliente en profile
+
 
 def not_logged_in(user):
     return not user.is_authenticated
@@ -20,6 +20,8 @@ def register(request):
                 user = form.save()
                 login(request, user)
                 return redirect('index')  # Redirige a la página principal u otra página de tu elección
+            else:
+                return render(request, 'registration/register.html', {'form': form, 'anchor': '#error_message_register'})
         else:
             form = ClienteCreationForm()
         return render(request, 'registration/register.html', {'form': form})
@@ -71,8 +73,8 @@ def login_view(request):
     return render(request, 'index.html', {'error_message': error_message})
 
 def index(request):
-    return render(request, 'index.html')
-
+    helados = Helado.objects.all()
+    return render(request, 'index.html', {'helados':helados})
 
 def salir(request):
     logout(request)

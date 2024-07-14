@@ -146,6 +146,8 @@ input[type="button"] {
 }
 
 .title_profile {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -202,11 +204,6 @@ input[type="button"] {
   background-color: #0056b3;
 }
 
-
-
-
-
-
   /* Style the body */
   body {
       font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
@@ -217,12 +214,18 @@ input[type="button"] {
   .gapSection{
       margin-top: 5rem;
   }
-  
+  .gapEspacio{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+  Ol >li {
+    margin-top: 1rem;
+  }
   .centerAll{
       width: 80%;
       margin:auto;
       margin-top: 2rem;
-      margin-bottom: 2rem;
+      /* margin-bottom: 2rem; */
   }
   
   /* TopHeader/logo */
@@ -469,13 +472,16 @@ input[type="button"] {
   }
   .flavorsFlexBx{
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       margin-top: 2rem;
-      justify-content: space-evenly;
+      justify-content: flex-start;
       background: url(../img/flavorsBackground.png); 
   }
+  .flexItem{
+    width: 30%;
+  }
   .flavorsFlexBx >div{
-      background-color: #d291bc30;
+      background-color: #ce11211a;
       margin: 0.5rem;
       padding: 0.5rem;
   }
